@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "gestalt": "^127.5.5",
+    "gestalt-charts": "^127.5.5",
+    "gestalt-datepicker": "^127.5.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

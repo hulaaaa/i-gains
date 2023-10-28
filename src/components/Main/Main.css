@@ -2,10 +2,10 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 200px;
+    gap: 100px;
     margin: 60px 50px;
     width: 100vw;
-    height: 100vh;
+    
 }
 
 .mainInfoDiv{
@@ -79,11 +79,10 @@
 }
 .bodyImg {
     width: 200px;
+    height: auto;
     margin: 0;
     padding: 0;
-    
     position: relative;
-    
 }
 .navigateBody {
     margin-left: 40px;
@@ -101,3 +100,40 @@
     width: 7px;
     height: 15px;
 }
+
+.divHeightInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 40px;
+    background: #FFF;
+    width: 200px;
+    height: fit-content;
+    padding: 20px 0;
+}
+.divHeightInfo-top{
+    padding-left: 20px;
+}
+.divHeightInfo-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 20px;
+    margin-top: 10px;
+}
+.divHeightInfo-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 100px;
+    background: #F0F0F0;
+    padding: 2px 8px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+.divHeightInfo-btn svg{
+    width: 12px;
+    height: 12px;
+}
+
