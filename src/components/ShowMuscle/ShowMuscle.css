@@ -20,3 +20,24 @@
     align-items: flex-start;
     gap: 11px;
 }
+.logoMuscle-textPresetationg{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    padding: 30px 20px;
+}
+.logoMuscle-1div{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.logoMuscle-1div_text{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.gitIntro{
+    width: 100%;
+    border-radius: 10px;
+}

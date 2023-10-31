@@ -6,7 +6,6 @@ import ShowMuscle from './components/ShowMuscle/ShowMuscle'
 
 function App() {
   const [dataForComponentA, setDataForComponentA] = useState("");
-
   const handleDataUpdate = (data) => {
     setDataForComponentA(data);
   };
