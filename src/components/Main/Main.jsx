@@ -3,7 +3,7 @@ import bodyImg from "../../assets/img/Body_Muscle.png"
 import avatar from "../../assets/img/avatar.png"
 import  { useState, useRef } from "react";
 
-const Main = () => {
+const Main = ({ onDataUpdate }) => {
     const [info, setInfo] = useState("");
     const areas = [
         {
@@ -35,7 +35,7 @@ const Main = () => {
             info: "хуй, член, піська"
         },
     ];
-    
+
     const imageRef = useRef();
     const handleMouseMove = event => {
         const x = event.clientX - imageRef.current.offsetLeft;
@@ -46,10 +46,10 @@ const Main = () => {
         if (area) {
             const newInfo = area.info;
             setInfo(newInfo);
+            onDataUpdate(newInfo);
         }
-        else setInfo("")
     };
-    
+
     return (
         <div className="mainContDiv">
             <div className="mainInfoDiv">
@@ -162,7 +162,7 @@ const Main = () => {
                             </button>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="202" height="27" viewBox="0 0 202 27" fill="none">
-                            <path d="M1 16.5C9.5213 19.6667 30.7744 26 47.6165 26C68.6692 26 90.4737 13.5 110.023 13.5C129.571 13.5 132.579 20.5 148.368 20.5C164.158 20.5 191.226 9.5 201 1" stroke="#00A053" stroke-opacity="0.5" stroke-width="2"/>
+                            <path d="M1 16.5C9.5213 19.6667 30.7744 26 47.6165 26C68.6692 26 90.4737 13.5 110.023 13.5C129.571 13.5 132.579 20.5 148.368 20.5C164.158 20.5 191.226 9.5 201 1" stroke="#00A053" strokeOpacity="0.5" strokeWidth="2"/>
                         </svg>
                     </div>
 
@@ -219,16 +219,13 @@ const Main = () => {
                             </button>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="201" height="36" viewBox="0 0 201 36" fill="none">
-                            <path d="M200 1C191.457 5.15625 163.475 28.4688 146.5 28.4688C123.5 28.4688 122.5 16 92.5 16C67.9386 16 54 22.5 45.5 28.4688C37 34.4375 16.5 36 1 31.5" stroke="#FF5D12" stroke-width="2"/>
+                            <path d="M200 1C191.457 5.15625 163.475 28.4688 146.5 28.4688C123.5 28.4688 122.5 16 92.5 16C67.9386 16 54 22.5 45.5 28.4688C37 34.4375 16.5 36 1 31.5" stroke="#FF5D12" strokeWidth="2"/>
                         </svg>
                     </div>
                 </div>
             </div>
             <div className="mainBodyMap">
                 <div className="bodyImgDiv">
-                    <div className="info">
-                        <h1>! {info} </h1>
-                    </div>
                     <img ref={imageRef} onMouseMove={handleMouseMove} onMouseEnter={() => handleMouseMove()}  src={bodyImg} alt="bodyImg" className="bodyImg"/>
                 </div>
                 <div className="navigateBody">
